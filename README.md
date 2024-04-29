@@ -84,11 +84,11 @@ PM2 is an excellent Node process management tool that can help applications auto
 Stop the block Explorer first, then use this command to start
 
 	cd sugarchain-blockchain-explorer2
-	pm2 start ./bin/www --name sugarchain-explorer
+	pm2 start ./bin/www --name sugarchain-blockchain-explorer2
 
 ### View project information
 
-	pm2 info sugarchain-explorer
+	pm2 info sugarchain-blockchain-explorer2
 
 ### View resource usage
 
