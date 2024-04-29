@@ -49,7 +49,19 @@ Then `:wq` save and re source the file
 
 *Make required changes in sugarchain-blockchain-explorer2/views/index.ejs*
 
-*settings* *'api': 'https://api.sugarchain.net'* Can be modified to an available API address
+	var networksConfigs = {
+		'SUGAR': {
+			'name': 'Main Network (SUGAR)',
+			// 'api': 'https://api.sugarchain.org',
+			//'api': 'https://api.sugar.wtf',
+			'api': 'https://api.sugarchain.net',
+			'ticker': 'SUGAR',
+			'decimals': 8,
+			'hrp': 'sugar'
+		},
+	}
+
+*make sure to change SugarChain node credentials in `api` can successfully connect*
 
 ### Start Explorer
 
