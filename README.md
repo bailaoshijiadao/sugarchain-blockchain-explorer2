@@ -2,11 +2,9 @@
 
 Simple blockchain explorer
 
-An open source block explorer written in node.js.
-
 ### Requires
 
-*  node.js >= 8.17.0 (12.14.0 is advised for updated dependencies)
+*  node.js >= 12.14.0
 
 ### nvm install
 	
