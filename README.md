@@ -2,6 +2,9 @@
 
 Simple blockchain explorer
 
+<details>
+<summary>Manual install</summary>
+
 ### Requires
 
 *  node.js >= 12.14.0
@@ -90,4 +93,7 @@ Stop the block Explorer first, then use this command to start
 ### View resource usage
 
 	pm2 monit
+
+</details>
+
 
