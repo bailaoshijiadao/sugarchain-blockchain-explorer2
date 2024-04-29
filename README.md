@@ -70,3 +70,27 @@ Then `:wq` save and re source the file
 ### COMPLETE
 
 
+# Optional Settings
+
+## PM2 settings
+
+PM2 is an excellent Node process management tool that can help applications automatically restart after a crash.
+
+### PM2 install
+
+	npm install pm2 -g
+
+### Start Explorer
+
+Stop the block Explorer first, then use this command to start
+
+	pm2 start ./bin/www --name sugarchain-explorer
+
+### View project information
+
+	pm2 info sugarchain-explorer
+
+### View resource usage
+
+	pm2 monit
+
