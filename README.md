@@ -1,7 +1,5 @@
 #  sugarchain-blockchain-explorer2
 
-================
-
 Simple blockchain explorer
 
 An open source block explorer written in node.js.
