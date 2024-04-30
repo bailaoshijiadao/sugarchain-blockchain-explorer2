@@ -174,13 +174,13 @@ After that blockchain explorer should be accessible via domain you pointed
 
 	vim /etc/profile
 
-在文件最后追加以下内容
+英文输入法状态下按下字母i按键, 在文件最后追加以下内容
 
 	export NVM_DIR="$HOME/.nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 	[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 	
-然后 `：wq` 保存并重新加载系统环境变量并立即生效
+然后按下 `Esc` 按键, 输入 `:wq` 保存并重新加载系统环境变量并立即生效
 
 	source /etc/profile
 
