@@ -97,6 +97,60 @@ Stop the block Explorer first, then use this command to start
 ### View resource usage
 
 	pm2 monit
+	
+## Domain settings
+
+### Point domain to your server
+
+### Install Nginx
+
+	sudo apt-get update
+	sudo apt install nginx -y
+	
+### Create nginx config (replace explorer2.example.com with your domain)
+
+	sudo vim /etc/nginx/sites-available/explorer2.example.com.conf
+	
+Write the following content (replace explorer2.example.com with your domain)
+	
+	server {
+		server_name explorer2.example.com;
+
+		location / {
+			proxy_pass http://localhost:3099;
+			proxy_http_version 1.1;
+			proxy_set_header Upgrade $http_upgrade;
+			proxy_set_header Connection 'upgrade';
+			proxy_set_header Host $host;
+			proxy_cache_bypass $http_upgrade;
+		}
+
+		location /socket.io {
+			include proxy_params;
+			proxy_http_version 1.1;
+			proxy_buffering off;
+			proxy_set_header Upgrade $http_upgrade;
+			proxy_set_header Connection "Upgrade";
+			proxy_pass http://127.0.0.1:3099/socket.io;
+		}
+
+		listen 80;
+	}
+
+### Activate nginx config (replace explorer2.example.com with your domain)
+
+	sudo ln -s /etc/nginx/sites-available/explorer2.example.com.conf /etc/nginx/sites-enabled
+	
+### Install certbot for ssl certificate
+
+	sudo apt install snapd -y
+	sudo snap install --classic certbot
+	
+### Obtain certificate (replace explorer2.example.com with your domain)
+
+	sudo certbot --nginx -d explorer2.example.com
+	
+After that API should be accessible via domain you pointed	
 
 </details>
 
