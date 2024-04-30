@@ -239,7 +239,7 @@ PM2是一个优秀的节点进程管理工具, 可以帮助应用程序在崩溃
 
 ### 使用 PM2 启动区块浏览器
 
-首先停止块资源管理器，然后使用此命令启动
+首先应停止前面运行的区块浏览器的运行，然后再使用下面命令启动即可
 
 	cd sugarchain-blockchain-explorer2
 	pm2 start ./bin/www --name sugarchain-blockchain-explorer2
