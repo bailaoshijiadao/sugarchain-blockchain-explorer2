@@ -1,13 +1,13 @@
 #  sugarchain-blockchain-explorer2
 
+<details>
+<summary>Click to view manual deployment</summary>
+
 Simple blockchain explorer
 
 A web page explorer written in JavaScript and running in the nodejs.
 
 *Note: You only need to set a reachable API address to use it normally, and the block browser does not need to be on the same server as the API node*
-
-<details>
-<summary>Click to view manual deployment</summary>
 
 ### Requires
 
