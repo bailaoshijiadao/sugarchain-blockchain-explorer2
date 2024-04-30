@@ -2,7 +2,7 @@
 
 <details>
 <summary>Click to view manual deployment</summary>
-
+<br>
 Simple blockchain explorer
 
 A web page explorer written in JavaScript and running in the nodejs.
@@ -102,7 +102,7 @@ Stop the block Explorer first, then use this command to start
 
 <details>
 <summary>点击查看手动部署</summary>
-
+<br>
 简单的网页区块链浏览器
 
 一个用JavaScript编写并在nodejs中运行的网页区块链浏览器
