@@ -100,4 +100,102 @@ Stop the block Explorer first, then use this command to start
 
 </details>
 
+<details>
+<summary>点击查看手动部署</summary>
 
+简单的网页区块链浏览器
+
+一个用JavaScript编写并在nodejs中运行的网页区块链浏览器
+
+*注意: 您只需要设置一个可访问的 API 地址即可正常使用，网页区块浏览器不需要与 API 节点位于同一服务器上*
+
+### 依赖
+
+*  node.js >= 12.14.0
+
+### nvm 安装
+	
+	sudo apt-get update
+	cd && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.9/install.sh | bash
+
+	vim /etc/profile
+
+在文件最后追加以下内容
+
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+	
+然后 `：wq` 保存并重新加载系统环境变量并立即生效
+
+	source /etc/profile
+
+### Nodejs 安装
+
+	nvm install v12.14.0
+
+### 获取源码
+
+    git clone https://github.com/bailaoshijiadao/sugarchain-blockchain-explorer2
+
+### 安装node依赖
+
+    cd sugarchain-blockchain-explorer2 && npm install
+
+### 设置端口
+
+*sugarchain-blockchain-explorer2/bin/www 路径的文件中进行必要的更改*
+
+*修改* *port* 默认端口 3099
+
+### 设置 API 地址
+
+*sugarchain-blockchain-explorer2/views/index.ejs 路径的文件中进行必要的更改*
+
+	var networksConfigs = {
+		'SUGAR': {
+			'name': 'Main Network (SUGAR)',
+			// 'api': 'https://api.sugarchain.org',
+			//'api': 'https://api.sugar.wtf',
+			'api': 'https://api.sugarchain.net',
+			'ticker': 'SUGAR',
+			'decimals': 8,
+			'hrp': 'sugar'
+		},
+	}
+
+*确保更改 `api`中的糖链节点凭据可以成功连接*
+
+### 启动区块浏览器
+
+    npm start
+
+### 完成
+
+
+# 可选的一些设置
+
+## PM2 设置
+
+PM2是一个优秀的节点进程管理工具, 可以帮助应用程序在崩溃后自动重启
+
+### PM2 安装
+
+	npm install pm2 -g
+
+### 使用 PM2 启动区块浏览器
+
+首先停止块资源管理器，然后使用此命令启动
+
+	cd sugarchain-blockchain-explorer2
+	pm2 start ./bin/www --name sugarchain-blockchain-explorer2
+
+### 查看 PM2 区块浏览器项目信息
+
+	pm2 info sugarchain-blockchain-explorer2
+
+### 查看资源使用情况
+
+	pm2 monit
+
+</details>
