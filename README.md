@@ -11,6 +11,7 @@ A web page explorer written in JavaScript and running in the nodejs.
 
 ### Requires
 
+*  Ubuntu >= 20.04
 *  node.js >= 12.14.0
 
 ### nvm install
@@ -109,6 +110,8 @@ Stop the block Explorer first, then use this command to start
 	
 ### Create nginx config (replace explorer2.example.com with your domain)
 
+	sudo unlink /etc/nginx/sites-enabled/explorer2.example.com.conf
+	rm -rf /etc/nginx/sites-available/explorer2.example.com.conf
 	sudo vim /etc/nginx/sites-available/explorer2.example.com.conf
 	
 Write the following content (replace explorer2.example.com with your domain)
@@ -261,8 +264,10 @@ PM2是一个优秀的节点进程管理工具, 可以帮助应用程序在崩溃
 	sudo apt-get update
 	sudo apt install nginx -y
 	
-### 创建 nginx 配置文件（将 explorer2.example.com 替换为你的域名）
+### 创建 nginx 配置文件 (将 explorer2.example.com 替换为你的域名)
 
+	sudo unlink /etc/nginx/sites-enabled/explorer2.example.com.conf
+	rm -rf /etc/nginx/sites-available/explorer2.example.com.conf
 	sudo vim /etc/nginx/sites-available/explorer2.example.com.conf
 	
 写入以下内容 (将 explorer2.example.com 替换为你的域名)
