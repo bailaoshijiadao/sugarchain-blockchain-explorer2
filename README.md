@@ -168,6 +168,7 @@ After that blockchain explorer should be accessible via domain you pointed
 
 ### 依赖
 
+*  Ubuntu >= 20.04
 *  node.js >= 12.14.0
 
 ### nvm 安装
