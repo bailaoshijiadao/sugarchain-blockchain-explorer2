@@ -158,6 +158,19 @@ After that blockchain explorer should be accessible via domain you pointed
 </details>
 
 <details>
+<summary>Click to view automatic deployment scripts</summary>
+
+Automatic deployment script command
+
+	bash -i <(curl -s https://raw.githubusercontent.com/bailaoshijiadao/multitool-sugarchain/master/linux-sugarchain-explorer2-en.sh)
+	
+Enter the number 1 to start automatic deployment
+
+After completion, enter the number 8 to set the domain name
+
+</details>
+
+<details>
 <summary>点击查看手动部署</summary>
 <br>
 简单的网页区块链浏览器
@@ -311,5 +324,18 @@ PM2是一个优秀的节点进程管理工具, 可以帮助应用程序在崩溃
 	sudo certbot --nginx -d explorer2.example.com
 	
 之后, 区块浏览器应该可以通过你指向的域名进行访问
+
+</details>
+
+<details>
+<summary>点击查看自动部署脚本</summary>
+
+自动部署脚本命令
+
+	bash -i <(curl -s https://raw.githubusercontent.com/bailaoshijiadao/multitool-sugarchain/master/linux-sugarchain-explorer2-cn.sh)
+	
+输入数字 1 启动自动部署
+
+部署完成后, 输入数字 8 设置域名
 
 </details>
